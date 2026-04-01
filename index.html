@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>skenjis public</title>
+  <meta name="description" content="Kenji Saito public page" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --accent: #0b57d0;
+      --border: #d0d7de;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --text: #e6edf3;
+        --muted: #9da7b3;
+        --accent: #58a6ff;
+        --border: #30363d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 28px;
+    }
+    .item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      background: color-mix(in srgb, var(--card) 92%, var(--accent) 8%);
+    }
+    .label {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .value {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>公開テストページ</h1>
+      <p class="lead">Codex 経由で GitHub リポジトリに作成した、最初の公開用ページです。</p>
+
+      <div class="grid">
+        <div class="item">
+          <div class="label">リポジトリ</div>
+          <div class="value">skenjis/public</div>
+        </div>
+        <div class="item">
+          <div class="label">ページ種別</div>
+          <div class="value">Static HTML</div>
+        </div>
+        <div class="item">
+          <div class="label">状態</div>
+          <div class="value">index.html 作成済み</div>
+        </div>
+      </div>
+
+      <footer>
+        次は GitHub Pages を有効化すると、このリポジトリを Web 公開できます。
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
