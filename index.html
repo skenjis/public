@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>株クラ新緑ピクニック会 2026 | Q1・Q3〜Q7</title>
-  <meta name="description" content="株クラ新緑ピクニック会・春の陣2026の回答からQ1,Q3,Q4,Q5,Q6,Q7を抜き出した公開ページ" />
+  <title>株クラ新緑ピクニック会 2026 | Q1・Q3〜Q7 集計</title>
+  <meta name="description" content="株クラ新緑ピクニック会・春の陣2026の回答からQ1,Q3,Q4,Q5,Q6,Q7を抜き出し、Q4集計と持参見込みをまとめたページ" />
   <style>
     :root {
-      --bg-1: #f8f4ec;
-      --bg-2: #e5efe3;
-      --ink: #243027;
-      --muted: #4d5b51;
-      --line: #c6d4c6;
-      --card: #fffefb;
+      --bg1: #f6efe6;
+      --bg2: #e4efe4;
+      --ink: #243228;
+      --muted: #516154;
+      --line: #c5d5c8;
+      --card: #fffdf9;
       --accent: #2f7d5a;
       --accent-soft: #e9f5ef;
+      --accent-2: #b16b2f;
+      --accent-2-soft: #fff1e6;
     }
 
     * {
@@ -26,34 +28,37 @@
       color: var(--ink);
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
       background:
-        radial-gradient(1200px 600px at 10% -10%, #fff9e7 0%, transparent 55%),
-        radial-gradient(1200px 600px at 95% 0%, #e8f6ee 0%, transparent 60%),
-        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+        radial-gradient(1100px 560px at 5% -10%, #fff8e8 0%, transparent 58%),
+        radial-gradient(1200px 560px at 100% 0%, #e6f5ee 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
       min-height: 100vh;
       line-height: 1.6;
     }
 
     .wrap {
-      width: min(1120px, 92vw);
+      width: min(1140px, 92vw);
       margin: 0 auto;
-      padding: 40px 0 64px;
+      padding: 36px 0 64px;
     }
 
-    header {
-      margin-bottom: 20px;
-      padding: 24px;
+    .panel {
       border: 1px solid var(--line);
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.76);
       backdrop-filter: blur(4px);
-      box-shadow: 0 14px 40px rgba(40, 68, 54, 0.08);
+      box-shadow: 0 14px 36px rgba(39, 71, 54, 0.1);
+      padding: 22px;
+    }
+
+    header.panel {
+      margin-bottom: 16px;
     }
 
     h1 {
       margin: 0 0 8px;
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      letter-spacing: 0.01em;
+      font-size: clamp(1.6rem, 4vw, 2.7rem);
       line-height: 1.2;
+      letter-spacing: 0.01em;
     }
 
     .lead {
@@ -62,155 +67,233 @@
       font-size: 1rem;
     }
 
-    .summary {
-      margin-top: 14px;
+    .pill-row {
+      margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
     .pill {
-      padding: 7px 12px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: var(--accent-soft);
-      font-size: 0.9rem;
-      font-weight: 600;
       color: #1f5f43;
+      padding: 7px 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
     }
 
-    .list {
+    .grid {
+      margin-top: 16px;
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 18px;
     }
 
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-      padding: 16px;
-      box-shadow: 0 10px 26px rgba(39, 72, 55, 0.08);
-      animation: fade-up 0.45s ease both;
-    }
-
-    .card h2 {
+    .subhead {
       margin: 0 0 10px;
-      font-size: 1.1rem;
-      display: inline-flex;
+      font-size: 1.15rem;
+      display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .badge {
-      display: inline-flex;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .dot.warn {
+      background: var(--accent-2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      padding: 8px 6px;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .note-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .cards {
+      margin-top: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      padding: 14px;
+      box-shadow: 0 8px 20px rgba(39, 71, 54, 0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      display: flex;
       align-items: center;
-      justify-content: center;
-      width: 1.8rem;
-      height: 1.8rem;
+      gap: 8px;
+    }
+
+    .num {
+      width: 1.7rem;
+      height: 1.7rem;
       border-radius: 50%;
       background: var(--accent);
       color: #fff;
-      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
       font-weight: 700;
+      flex: 0 0 auto;
     }
 
     dl {
       margin: 0;
       display: grid;
       grid-template-columns: 190px 1fr;
-      gap: 8px 12px;
+      gap: 6px 10px;
+      font-size: 0.95rem;
     }
 
     dt {
       margin: 0;
       color: var(--muted);
       font-weight: 700;
-      font-size: 0.95rem;
     }
 
     dd {
       margin: 0;
-      font-size: 0.96rem;
       white-space: pre-wrap;
     }
 
     footer {
-      margin-top: 20px;
+      margin-top: 16px;
       color: var(--muted);
       font-size: 0.9rem;
       text-align: right;
     }
 
-    @keyframes fade-up {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 760px) {
-      .wrap {
-        width: min(680px, 94vw);
-        padding-top: 24px;
-      }
-
-      header {
-        padding: 18px;
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
       }
 
       dl {
         grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      dt {
-        margin-top: 8px;
       }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
+    <header class="panel">
       <h1>株クラ新緑ピクニック会・春の陣2026</h1>
-      <p class="lead">Googleフォーム回答から <strong>Q1 / Q3 / Q4 / Q5 / Q6 / Q7</strong> のみを抽出して表示しています。</p>
-      <div class="summary">
-        <span class="pill">表示件数: 1件</span>
-        <span class="pill">公開先: GitHub Pages</span>
+      <p class="lead">Googleフォーム回答から <strong>Q1 / Q3 / Q4 / Q5 / Q6 / Q7</strong> を抽出し、Q4集計と持参見込みを整理しています（Q2のメール列は未掲載）。</p>
+      <div class="pill-row">
+        <span class="pill">回答件数: 2件</span>
+        <span class="pill">Q3 参加予定: 2件</span>
+        <span class="pill">最終確認: 2026-04-01 22:31 JST</span>
       </div>
     </header>
 
-    <main class="list">
+    <section class="grid">
+      <article class="panel">
+        <h2 class="subhead"><span class="dot"></span>Q4 参加予定時間帯 集計</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>時間帯</th>
+              <th>人数</th>
+              <th>割合</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>13:00ごろから参加予定</td>
+              <td>2</td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel">
+        <h2 class="subhead"><span class="dot warn"></span>Q5/Q6 持参見込みサマリ</h2>
+        <ul class="note-list">
+          <li><strong>飲み物:</strong> ビール系の持参意向が2件（「350ml缶×数本」「ビールをいくつか」）、ワインは1件（「いくつか」）。</li>
+          <li><strong>食べ物:</strong> おつまみの持参意向が1件。</li>
+          <li><strong>備品:</strong> 確定している持参予定は0件（「これから考える」1件、「特になし」1件）。</li>
+          <li><strong>数量の確度:</strong> 具体本数や個数の明記が少ないため、現時点は「アルコール中心に数本〜いくつか」の見込み。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="cards">
       <article class="card">
-        <h2><span class="badge">1</span> Mee</h2>
+        <h3><span class="num">1</span>Mee</h3>
         <dl>
           <dt>Q1 お名前/ハンドル</dt>
           <dd>Mee</dd>
-
           <dt>Q3 参加予定</dt>
           <dd>参加予定</dd>
-
           <dt>Q4 参加予定時間帯</dt>
           <dd>13:00ごろから参加予定</dd>
-
           <dt>Q5 持参予定の飲食物</dt>
           <dd>クラフトビール350ml缶×数本、おつまみなど</dd>
-
           <dt>Q6 持参予定品の扱い</dt>
           <dd>これから考えます</dd>
-
           <dt>Q7 運営への連絡事項</dt>
           <dd>盛り上がるように頑張ります！</dd>
         </dl>
       </article>
-    </main>
 
-    <footer>抽出列: Q1, Q3, Q4, Q5, Q6, Q7</footer>
+      <article class="card">
+        <h3><span class="num">2</span>九条</h3>
+        <dl>
+          <dt>Q1 お名前/ハンドル</dt>
+          <dd>九条</dd>
+          <dt>Q3 参加予定</dt>
+          <dd>参加予定</dd>
+          <dt>Q4 参加予定時間帯</dt>
+          <dd>13:00ごろから参加予定</dd>
+          <dt>Q5 持参予定の飲食物</dt>
+          <dd>ビールとワインをいくつか</dd>
+          <dt>Q6 持参予定品の扱い</dt>
+          <dd>特になし</dd>
+          <dt>Q7 運営への連絡事項</dt>
+          <dd>幹事のみなさま、ありがとうございます！</dd>
+        </dl>
+      </article>
+    </section>
+
+    <footer>抽出列: Q1, Q3, Q4, Q5, Q6, Q7 | このページは非公開シートを Codex が読んで更新</footer>
   </div>
 </body>
 </html>
