@@ -1,0 +1,46 @@
+name: Sync Page From Google Sheets
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-sheet-page
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build index.html from Google Sheets
+        env:
+          SHEET_ID: "1FV8hHqpJRXz1Da1Ruq_EPr7uZS3Kml29MJ0OiFhKRbY"
+          SHEET_GID: "762888553"
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: python scripts/build_index_from_sheet.py
+
+      - name: Commit and push when index.html changed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes in index.html"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "chore: sync page from Google Sheets"
+          git push
