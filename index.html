@@ -17,11 +17,7 @@
       --accent-soft: #e9f5ef;
       --accent-2: #b16b2f;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       color: var(--ink);
@@ -33,181 +29,30 @@
       min-height: 100vh;
       line-height: 1.6;
     }
-
-    .wrap {
-      width: min(1140px, 92vw);
-      margin: 0 auto;
-      padding: 36px 0 64px;
-    }
-
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.76);
-      backdrop-filter: blur(4px);
-      box-shadow: 0 14px 36px rgba(39, 71, 54, 0.1);
-      padding: 22px;
-    }
-
-    header.panel {
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.6rem, 4vw, 2.7rem);
-      line-height: 1.2;
-      letter-spacing: 0.01em;
-    }
-
-    .lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .pill-row {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--accent-soft);
-      color: #1f5f43;
-      padding: 7px 12px;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .grid {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .subhead {
-      margin: 0 0 10px;
-      font-size: 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-block;
-    }
-
-    .dot.warn {
-      background: var(--accent-2);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-
-    th,
-    td {
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      padding: 8px 6px;
-      vertical-align: top;
-    }
-
-    th {
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .note-list {
-      margin: 0;
-      padding-left: 1.1rem;
-      display: grid;
-      gap: 8px;
-      font-size: 0.95rem;
-    }
-
-    .cards {
-      margin-top: 16px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--card);
-      padding: 14px;
-      box-shadow: 0 8px 20px rgba(39, 71, 54, 0.08);
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .num {
-      width: 1.7rem;
-      height: 1.7rem;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.88rem;
-      font-weight: 700;
-      flex: 0 0 auto;
-    }
-
-    dl {
-      margin: 0;
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 6px 10px;
-      font-size: 0.95rem;
-    }
-
-    dt {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    dd {
-      margin: 0;
-      white-space: pre-wrap;
-    }
-
-    footer {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-align: right;
-    }
-
-    @media (max-width: 860px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      dl {
-        grid-template-columns: 1fr;
-      }
-    }
+    .wrap { width: min(1140px, 92vw); margin: 0 auto; padding: 36px 0 64px; }
+    .panel { border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,0.76); backdrop-filter: blur(4px); box-shadow: 0 14px 36px rgba(39,71,54,0.1); padding: 22px; }
+    header.panel { margin-bottom: 16px; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.7rem); line-height: 1.2; letter-spacing: 0.01em; }
+    .lead { margin: 0; color: var(--muted); font-size: 1rem; }
+    .pill-row { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { border-radius: 999px; border: 1px solid var(--line); background: var(--accent-soft); color: #1f5f43; padding: 7px 12px; font-size: 0.9rem; font-weight: 700; }
+    .grid { margin-top: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .subhead { margin: 0 0 10px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
+    .dot.warn { background: var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px 6px; vertical-align: top; }
+    th { color: var(--muted); font-weight: 700; }
+    .note-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 8px; font-size: 0.95rem; }
+    .cards { margin-top: 16px; display: grid; gap: 12px; }
+    .card { border: 1px solid var(--line); border-radius: 16px; background: var(--card); padding: 14px; box-shadow: 0 8px 20px rgba(39,71,54,0.08); }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; }
+    .num { width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.88rem; font-weight: 700; flex: 0 0 auto; }
+    dl { margin: 0; display: grid; grid-template-columns: 190px 1fr; gap: 6px 10px; font-size: 0.95rem; }
+    dt { margin: 0; color: var(--muted); font-weight: 700; }
+    dd { margin: 0; white-space: pre-wrap; }
+    footer { margin-top: 16px; color: var(--muted); font-size: 0.9rem; text-align: right; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } dl { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -216,9 +61,9 @@
       <h1>株クラ新緑ピクニック会・春の陣2026</h1>
       <p class="lead">Googleフォーム回答から <strong>Q1 / Q3 / Q4 / Q5 / Q6 / Q7</strong> を抽出し、Q4集計と持参見込みを整理しています（Q2のメール列は未掲載）。</p>
       <div class="pill-row">
-        <span class="pill">回答件数: 12件</span>
-        <span class="pill">Q3 参加予定: 12件</span>
-        <span class="pill">最終確認: 2026-04-02 13:38 JST</span>
+        <span class="pill">回答件数: 15件</span>
+        <span class="pill">Q3 参加予定: 15件</span>
+        <span class="pill">最終確認: 2026-04-02 17:03 JST</span>
       </div>
     </header>
 
@@ -227,28 +72,12 @@
         <h2 class="subhead"><span class="dot"></span>Q4 参加予定時間帯 集計</h2>
         <table>
           <thead>
-            <tr>
-              <th>時間帯</th>
-              <th>人数</th>
-              <th>割合</th>
-            </tr>
+            <tr><th>時間帯</th><th>人数</th><th>割合</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>13:00ごろから参加予定</td>
-              <td>10</td>
-              <td>83.3%</td>
-            </tr>
-            <tr>
-              <td>14:00ごろから参加予定</td>
-              <td>1</td>
-              <td>8.3%</td>
-            </tr>
-            <tr>
-              <td>15:00ごろから参加予定</td>
-              <td>1</td>
-              <td>8.3%</td>
-            </tr>
+            <tr><td>13:00ごろから参加予定</td><td>13</td><td>86.7%</td></tr>
+            <tr><td>14:00ごろから参加予定</td><td>1</td><td>6.7%</td></tr>
+            <tr><td>15:00ごろから参加予定</td><td>1</td><td>6.7%</td></tr>
           </tbody>
         </table>
       </article>
@@ -256,11 +85,11 @@
       <article class="panel">
         <h2 class="subhead"><span class="dot warn"></span>Q5/Q6 持参見込みサマリ</h2>
         <ul class="note-list">
-          <li><strong>飲み物（アルコール）:</strong> アルコール系の持参意向は6件（ビール/缶チューハイ系5件、ワイン1件、日本酒4合瓶1本）。缶ビール数量明記は計8本。</li>
-          <li><strong>飲み物（ソフトドリンク）:</strong> 2L飲料は少なくとも5本（烏龍茶2本、お茶2本、午後の紅茶1本）が明記。</li>
-          <li><strong>食べ物:</strong> おつまみ系3件、チップス2袋、個包装お菓子2-3袋、シフォンケーキorサンドイッチ1件。飲食未定は2件。</li>
-          <li><strong>備品:</strong> ゴミ袋（5-10枚提案あり）2件、ウェットティッシュ1件、プラスティックコップ1件、レジャーシート系は複数回答で計4-5枚相当。</li>
-          <li><strong>補足:</strong> 同一名の複数回答と未記入項目があるため、数量は「下限〜目安」で把握するのが安全です。</li>
+          <li><strong>飲み物（アルコール）:</strong> アルコール系の持参意向は7件。缶ビールは明記分だけで最低14本、ほかにワイン、日本酒4合瓶1本、缶チューハイ数本の見込みがあります。</li>
+          <li><strong>飲み物（ソフトドリンク）:</strong> 2L飲料は少なくとも6本（烏龍茶2本、お茶2本、午後の紅茶1本、無糖麦茶系1本）で、さらにコーラ1本の申し出あり。甘い系・炭酸系・水系の選択肢が不足しやすいです。</li>
+          <li><strong>食べ物:</strong> チップス2袋、駄菓子おつまみ、個包装お菓子2-3袋、たいやき、シフォンケーキ or サンドイッチの見込み。軽食は増えたが、主食寄りはまだ心細めです。</li>
+          <li><strong>備品:</strong> レジャーシートは3m×3mが2枚、1m×2mが2枚、追加候補1件。ゴミ袋は3人から申し出、ウェットティッシュは2人、プラコップ1件、紙コップ1件あります。</li>
+          <li><strong>補足:</strong> カトラリーは少なめ運用の方針を維持します。Q6未記入は4件あるため、数量は「下限〜目安」で見積もるのが安全です。</li>
         </ul>
       </article>
     </section>
@@ -269,196 +98,10 @@
       <h2 class="subhead"><span class="dot warn"></span>あると嬉しい差し入れ（優先度つき）</h2>
       <table>
         <thead>
-          <tr>
-            <th>優先</th>
-            <th>あると嬉しいもの</th>
-            <th>目安量</th>
-            <th>理由（いま足りない点）</th>
-          </tr>
+          <tr><th>優先</th><th>あると嬉しいもの</th><th>目安量</th><th>理由（いま足りない点）</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>高</td>
-            <td>水・お茶以外のノンアル飲料</td>
-            <td>1.5L〜2Lを2〜4本</td>
-            <td>ソフトドリンクは本数はあるが種類が偏っているため。</td>
-          </tr>
-          <tr>
-            <td>中</td>
-            <td>主食寄りの軽食（おにぎり・サンド等）</td>
-            <td>5〜10人分</td>
-            <td>お菓子・つまみ中心で、腹持ちするものが少ないため。</td>
-          </tr>
-          <tr>
-            <td>中</td>
-            <td>取り分け用備品（トング、サービングスプーン、キッチンペーパー）</td>
-            <td>各1〜2セット</td>
-            <td>食べ物が増えた時の取り回しと衛生面を補強できるため。</td>
-          </tr>
-          <tr>
-            <td>低</td>
-            <td>紙コップ・紙皿・割り箸（予備の最小限）</td>
-            <td>10〜15人分</td>
-            <td>カトラリーは少なめ運用の方針のため、保険として最小限あれば十分。</td>
-          </tr>
-          <tr>
-            <td>低</td>
-            <td>予備のゴミ袋・ウェットティッシュ</td>
-            <td>ゴミ袋5枚前後、ティッシュ1〜2個</td>
-            <td>一部申し出はあるが、人数増に備えて予備があると安心。</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="margin:10px 0 0; color: var(--muted); font-size: 0.9rem;">注: 同一名の複数回答や未記入があるため、数量は「下限〜目安」で見積もっています。</p>
-    </section>
-
-    <section class="cards">
-      <article class="card">
-        <h3><span class="num">1</span>Mee</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>Mee</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>クラフトビール350ml缶×数本、おつまみなど</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>これから考えます</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>盛り上がるように頑張ります！</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">2</span>九条</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>九条</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>ビールとワインをいくつか</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>特になし</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>幹事のみなさま、ありがとうございます！</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">3</span>ぼくちゃん</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>ぼくちゃん</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>烏龍茶2L2本、チップス2袋</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>レジャーシート3mx3m1枚</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>初めてのオフ会です。</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">4</span>ぼくちゃん</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>ぼくちゃん</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>未定</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>レジャーシート3m×3mを1枚</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>初めてのオフ会です。</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">5</span>さくら</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>さくら</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>15:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>未定</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>ゴミ袋、ウェットティッシュ</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>お誘いありがとうございます！途中参加になりますが、顔出させていただきます！よろしくお願いします。</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">6</span>RENE</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>RENE</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>お茶2L×2本</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>（未記入）</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>オフ会は初めて</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">7</span>オイカワ</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>オイカワ</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>缶ビール350ml4本</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>（未記入）</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>（未記入）</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">8</span>仙石浩明</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>仙石浩明</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>キリン 午後の紅茶 おいしい無糖 2L</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>プラスティックコップ</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>（未記入）</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">9</span>おやつ</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>おやつ</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>日本酒4合瓶1本でも持って行こうかと…</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>（未記入）</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>（未記入）</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">10</span>らくだ</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>らくだ</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>14:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>飲み物（缶チューハイなど）数本、個包装のお菓子2-3袋くらい持参で考えています</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>ゴミ袋はたくさんあっても良いと思うので5-10枚くらい持っていきます。レジャーシートが足りないようなら持参できます（2m×2mくらい？）</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>（未記入）</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">11</span>kei(けい)</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>kei(けい)</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>缶ビール350ml×4本、駄菓子おつまみ</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>（未記入）</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>（未記入）</dd>
-        </dl>
-      </article>
-
-      <article class="card">
-        <h3><span class="num">12</span>kumakuma</h3>
-        <dl>
-          <dt>Q1 お名前/ハンドル</dt><dd>kumakuma</dd>
-          <dt>Q3 参加予定</dt><dd>参加予定</dd>
-          <dt>Q4 参加予定時間帯</dt><dd>13:00ごろから参加予定</dd>
-          <dt>Q5 持参予定の飲食物</dt><dd>シフォンケーキ or サンドイッチ</dd>
-          <dt>Q6 持参予定品の扱い</dt><dd>テントの下敷き（レジャーシート）。1m×2m  二枚。</dd>
-          <dt>Q7 運営への連絡事項</dt><dd>幹事立候補の熊田です。4/4夜まで幹事用チャットの確認ができません（いつもPCでチャットを見ており、旅行中スマホからチャレンジしたのですがパスコードを思い出せず）。ご迷惑をおかけし申し訳ございません。</dd>
-        </dl>
-      </article>
-    </section>
-
-    <footer>抽出列: Q1, Q3, Q4, Q5, Q6, Q7 | このページは非公開シートを Codex が読んで更新</footer>
-  </div>
-</body>
-</html>
+          <tr><td>高</td><td>水・お茶以外のノンアル飲料</td><td>1.5L〜2Lを2〜4本</td><td>お茶系は増えた一方、甘い系・炭酸系・子どもも飲みやすい選択肢はまだ少ないため。</td></tr>
+          <tr><td>中</td><td>主食寄りの軽食（おにぎり・サンド・パン系）</td><td>5〜10人分</td><td>おつまみや甘い物は増えてきたが、腹持ちするものはまだ薄めです。</td></tr>
+          <tr><td>中</td><td>取り分け用備品（トング、イビングスプーン、キッチンペーパー）</td><td>各1〜2セット</td><td>食べ物が増えた時の取り回しと衛生面を補強できます。</td></tr>
+          <tr><td>低</td><td>紙コップ・紙皿・割り箸（予備の最小限）</td><td>10〜15人分</td><td>カトラリーは少なめ運用の方針なので、保険として朁/{
